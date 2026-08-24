@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>재직자 AI 활용 직무향상과정(교사)</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #fff; --line: #888; --code: #f2f2f2; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #121212; --code: #222; } }
+  html { font-size: 112.5%; }
+  body { margin: 0; padding: 1rem; max-width: 46rem; margin-inline: auto; font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; line-height: 1.7; color: var(--fg); background: var(--bg); word-break: keep-all; overflow-wrap: anywhere; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.35rem; margin-top: 1.5rem; }
+  h3 { font-size: 1.2rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  h4 { font-size: 1.05rem; }
+  #menu { list-style: none; padding: 0; margin: 1.5rem 0; }
+  #menu li + li { margin-top: .75rem; }
+  button { font: inherit; color: inherit; background: var(--bg); border: 2px solid var(--fg); border-radius: .5rem; padding: .75rem 1rem; min-height: 44px; cursor: pointer; }
+  #menu button { width: 100%; text-align: left; font-size: 1.1rem; }
+  .close { margin: 1rem 0; }
+  button:hover { background: var(--code); }
+  :focus-visible { outline: 3px solid #0a66ff; outline-offset: 2px; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid var(--line); padding: .4rem .6rem; text-align: left; vertical-align: top; }
+  pre, code { font-family: Consolas, "D2Coding", monospace; font-size: .95em; }
+  pre { background: var(--code); padding: .75rem; overflow-x: auto; }
+  code { background: var(--code); padding: 0 .2em; }
+  pre code { padding: 0; }
+  blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 4px solid var(--line); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>재직자 AI 활용 직무향상과정(교사)</h1>
+<p>종로구시각장애인취업역량강화센터 · 김헌용 담당 4회기(2026. 8. 26.~9. 5.)</p>
+<ul id="menu">
+<li><button type="button" data-open="s1">사전 준비 안내</button></li>
+<li><button type="button" data-open="s2">1회기: 작업 환경 셋업</button></li>
+<li><button type="button" data-open="s3">2회기: 행정업무 자동화 기본</button></li>
+<li><button type="button" data-open="s4">3회기: 행정업무 자동화 심화</button></li>
+<li><button type="button" data-open="s5">4회기: 수업과 평가</button></li>
+</ul>
+<article id="s1" hidden>
+<button type="button" class="close" data-close>닫기</button>
+<h2 tabindex="-1">사전 준비 안내</h2>
+<p><strong>과정명</strong>: 재직자 AI 활용 직무향상과정(교사)
+<strong>해당 회기</strong>: 김헌용 강사 담당 4회기(8월 26일~9월 5일)</p>
+<p>아래 10가지 준비사항을 참고하여 강의 전에 필요한 작업을 완료해 주세요.</p>
+<hr />
+<h3>지금 바로</h3>
+<h4>1. EVPN 신청</h4>
+<p>자택에서 나이스·K-에듀파인·교데통에 접속하려면 교육청 원격업무지원서비스(EVPN)가 있어야 합니다. 학교 부서장 승인을 거쳐 며칠이 걸리므로 <strong>이 안내를 받으시는 즉시 신청해 주세요.</strong> 8월 31일 2회기 전까지 승인이 나야 합니다.</p>
+<p><strong>신청 방법</strong></p>
+<ol>
+<li>나이스에서 <strong>[기본메뉴] &gt; [원격업무지원서비스] &gt; [원격업무지원서비스(eVPN)]</strong> 으로 들어갑니다.</li>
+<li>신청서에 다음을 적습니다.
+   - <strong>사용기간</strong>: 최대 6개월까지 가능하며, 시작일자는 신청 당일로 잡습니다.
+   - <strong>접속그룹</strong>: 업무포털.
+   - <strong>VPN 전용 비밀번호</strong>: 숫자·영문·특수문자를 조합해 9자 이상. 아이디와 같게 쓸 수 없습니다. 나이스 비밀번호와 별개이므로 따로 기록해 두세요.
+   - <strong>보안서약서 동의</strong>와 <strong>요청사유</strong>.</li>
+<li>신청 후 학교 부서장(정보보안 담당) 승인을 받아야 사용할 수 있습니다. 담당 선생님께 승인을 요청해 주세요.</li>
+</ol>
+<p><strong>확인 방법</strong></p>
+<p>승인이 나면 브라우저로 아래 주소에 접속해 로그인이 되는지 확인합니다.</p>
+<pre><code>https://evpn.sen.go.kr
+</code></pre>
+<p>서울 외 시도는 <code>evpn.</code> 뒤의 교육청 도메인이 다릅니다(대구 <code>evpn.dge.go.kr</code>, 충남 <code>evpn.cne.go.kr</code>, 부산 <code>evpn.pen.go.kr</code>, 인천 <code>evpn.ice.go.kr</code> 형태).</p>
+<p>로그인하면 상단에 다운로드와 Run VPN 버튼이 생깁니다. 이 컴퓨터에서 처음 쓰시는 것이면 다운로드로 클라이언트를 설치하고, <strong>Run VPN</strong>을 눌러 뜨는 별도 창에서 같은 아이디와 VPN 비밀번호로 한 번 더 로그인합니다. 상단 상태가 Installed, Running, Connected 모두 Yes가 되면 연결된 것입니다.</p>
+<p><strong>이미 EVPN을 쓰고 계시면</strong> 신청은 건너뛰고 위 확인만 해 주세요. 사용기간이 만료됐으면 나이스에서 다시 신청하셔야 합니다.</p>
+<hr />
+<h3>1회기(8월 26일) 전까지</h3>
+<h4>2. Claude 계정 로그인</h4>
+<p>센터가 지원하는 Pro 계정으로 로그인합니다. <strong>무료 플랜에서는 실습에 쓸 Code 탭이 나타나지 않으므로</strong> 플랜을 먼저 확인해 주세요.</p>
+<h4>3. Claude Desktop 앱 설치</h4>
+<p>아래 주소에서 Windows용 앱을 내려받아 설치합니다.</p>
+<pre><code>https://claude.ai/download
+</code></pre>
+<p><strong>확인</strong>: 앱을 실행해 좌측 상단 탭 영역에 <strong>Code</strong> 탭이 있는지 봅니다. Code 탭이 보이면 2번과 3번이 함께 확인된 것입니다.</p>
+<h4>4. Git 설치</h4>
+<p>Code 탭을 처음 열면 <strong>Git 설치 안내 대화상자</strong>가 자동으로 뜹니다. 대화상자 안의 <strong>Git 다운로드</strong> 버튼을 누르고, 내려받은 설치 파일을 실행해 모든 화면에서 기본 설정 그대로 Next 또는 Install을 눌러 끝까지 설치합니다.</p>
+<p><strong>「나중에」 버튼을 누르지 마세요.</strong> Git 없이 진행되어 다음 단계가 막힙니다.</p>
+<p><strong>확인</strong>: 설치를 마친 뒤 Code 탭으로 돌아와 하단 입력창에 아래 문장을 그대로 붙여넣고 보냅니다.</p>
+<blockquote>
+<p>git 설치를 마쳤는데 제대로 설치된 것인지 확인해 줘.</p>
+</blockquote>
+<p>Claude가 확인을 위해 PowerShell 명령을 실행하겠다며 권한을 묻습니다. <strong>항상 허용</strong>을 누르세요. 설치가 확인됐다는 답이 오면 된 것입니다.</p>
+<p>환경 변수를 설정해야 한다는 안내가 나오면 시스템 설정 창을 직접 건드리지 마시고 입력창에 아래 한 줄을 보내세요.</p>
+<blockquote>
+<p>옵션 1로 네가 바로 설정해 줘.</p>
+</blockquote>
+<p>설정이 끝나면 앱을 완전히 종료한 뒤 다시 실행합니다. <code>Alt+F4</code>로 창을 닫고, 작업 표시줄 알림 영역의 Claude 아이콘에서 <code>Shift+F10</code>으로 메뉴를 열어 <strong>종료</strong>를 선택합니다.</p>
+<h4>5. Node.js와 Python 설치</h4>
+<p>스킬 설치와 문서 파싱에 필요합니다. 4번까지 마치셨으면 입력창에 아래를 그대로 붙여넣으세요.</p>
+<blockquote>
+<p>이 컴퓨터에 Node.js와 Python이 설치돼 있는지 확인하고, 없으면 설치해 줘. 설치가 끝나면 각각의 버전을 알려 줘.</p>
+</blockquote>
+<p>도중에 권한 요청이 뜨면 내용을 읽고 허용합니다. 마지막에 두 프로그램의 버전이 나오면 설치된 것입니다.</p>
+<h4>6. 홈 디렉터리에 연습 폴더 만들기</h4>
+<p>홈 디렉터리에 폴더를 하나 만들고 이름을 「연습」으로 붙입니다. Windows에서 홈 디렉터리는 <code>C:\Users\&lt;본인 계정 이름&gt;</code>이며, 파일 탐색기에는 「사용자」 폴더 아래 본인 계정 이름으로 표시됩니다. 파일 탐색기에서 <code>Alt+D</code>로 주소창에 이동해 <code>%USERPROFILE%</code>을 입력하고 Enter를 누르면 바로 열립니다.</p>
+<p>연습 폴더 안에는 다음 두 파일을 넣어 주세요.</p>
+<ul>
+<li>본인 업무에서 받은 <strong>공문 PDF 한 개</strong></li>
+<li>본인이 다루는 <strong>한글 문서 한 개</strong>(가정통신문, 계획서, 학습지 등)</li>
+</ul>
+<p><strong>학생 이름이나 학번이 들어 있지 않은 문서</strong>로 골라 주세요.</p>
+<hr />
+<h3>2회기(8월 31일) 전까지</h3>
+<h4>7. Claude in Chrome 확장 설치와 연결</h4>
+<p>Chrome 브라우저에 Claude 확장을 설치하고 계정으로 로그인합니다. Chrome 확장이란 브라우저에 기능을 더해 주는 작은 프로그램을 말합니다. 이 확장을 설치하면 Claude가 크롬 창을 직접 조작해 나이스와 K-에듀파인 화면을 다룰 수 있습니다.</p>
+<p><strong>Claude in Chrome 설치 URL</strong>:</p>
+<pre><code>https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn
+</code></pre>
+<p>페이지에서 <strong>Chrome에 추가</strong> 버튼을 누르고, 설치가 끝나면 확장을 열어 Claude 계정으로 로그인합니다.</p>
+<p><strong>확인</strong>: Chrome이 실행된 상태에서 Claude 입력창에 <code>/chrome</code>을 보내 연결을 켠 뒤 아래를 보냅니다.</p>
+<blockquote>
+<p>지금 열려 있는 크롬 탭 목록을 읽어 줘.</p>
+</blockquote>
+<p>탭 목록이 나오면 연결된 것입니다. 처음 연결에는 시간이 걸릴 수 있으니 응답이 없으면 잠시 뒤 한 번 더 시도해 보세요.</p>
+<h4>8. PowerShell 7 설치</h4>
+<p>K-에듀파인의 결재 문서 창을 다루는 데 필요합니다. 입력창에 아래를 보내세요.</p>
+<blockquote>
+<p>PowerShell 7이 설치돼 있는지 확인하고, 없으면 설치해 줘.</p>
+</blockquote>
+<p><strong>확인</strong>: 설치 후 버전이 7 이상으로 나오면 된 것입니다.</p>
+<h4>9. Gemini API 키 발급</h4>
+<p>문서 파싱과 음성 변환 실습에 씁니다. 무료로 쓸 수 있는 범위 안에서 진행하므로 요금은 들지 않습니다.</p>
+<pre><code>https://aistudio.google.com/apikey
+</code></pre>
+<p>Google 계정으로 로그인한 뒤 API 키를 만들고, 발급된 키를 메모장 등에 복사해 두세요. 3회기 실습 때 입력하게 됩니다.</p>
+<p><strong>키는 비밀번호와 같습니다.</strong> 다른 사람과 공유하지 마시고, 화면에 띄워 둔 채 자리를 비우지 마세요.</p>
+<h4>10. 교육행정 전자서명 인증서 확인</h4>
+<p>실습에 쓸 노트북에 인증서가 설치돼 있고 로그인이 되는지 확인합니다. 평소 학교 컴퓨터에서만 쓰셨다면 이번에 쓸 노트북으로 인증서를 옮기셔야 합니다.</p>
+<p><strong>확인</strong>: EVPN을 연결한 뒤 업무포털에 인증서로 로그인해 봅니다.</p>
+<pre><code>https://sen.eduptl.kr
+</code></pre>
+<p><strong>인증서 비밀번호는 어떤 경우에도 본인이 직접 입력하세요.</strong></p>
+<hr />
+<h3>함께 확인할 것</h3>
+<h4>노트북 관리자 권한</h4>
+<p>Git, Node.js, Python, PowerShell 7 설치에는 관리자 권한이 필요합니다. 학교에서 지급받은 노트북은 설치가 막혀 있을 수 있으니 1회기 전에 미리 확인해 주세요. 설치가 거부되면 학교 정보부에 요청하시거나 개인 노트북으로 실습해 주세요.</p>
+<h4>운영체제</h4>
+<p>실습 절차는 Windows 기준으로 준비했습니다. macOS를 쓰시면 미리 알려 주세요.</p>
+<h4>소속 교육청</h4>
+<p>나이스·K-에듀파인·교데통은 시도마다 주소와 세부 화면이 다릅니다. 근무하시는 시도교육청을 알려 주세요.</p>
+<hr />
+<h3>준비사항 점검표</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>마감</th>
+<th>확인</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. EVPN 신청</td>
+<td>지금 바로(승인은 8/31까지)</td>
+<td></td>
+</tr>
+<tr>
+<td>2. Claude 계정 로그인</td>
+<td>8/26</td>
+<td></td>
+</tr>
+<tr>
+<td>3. Claude Desktop 앱 설치</td>
+<td>8/26</td>
+<td></td>
+</tr>
+<tr>
+<td>4. Git 설치</td>
+<td>8/26</td>
+<td></td>
+</tr>
+<tr>
+<td>5. Node.js·Python 설치</td>
+<td>8/26</td>
+<td></td>
+</tr>
+<tr>
+<td>6. 연습 폴더와 파일 두 개</td>
+<td>8/26</td>
+<td></td>
+</tr>
+<tr>
+<td>7. Claude in Chrome 확장</td>
+<td>8/31</td>
+<td></td>
+</tr>
+<tr>
+<td>8. PowerShell 7 설치</td>
+<td>8/31</td>
+<td></td>
+</tr>
+<tr>
+<td>9. Gemini API 키 발급</td>
+<td>8/31</td>
+<td></td>
+</tr>
+<tr>
+<td>10. 전자서명 인증서 확인</td>
+<td>8/31</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<button type="button" class="close" data-close>닫기</button>
+</article>
+<article id="s2" hidden>
+<button type="button" class="close" data-close>닫기</button>
+<h2 tabindex="-1">1회기: 작업 환경 셋업</h2>
+<ul>
+<li><strong>과정명</strong>: 재직자 AI 활용 직무향상과정(교사)</li>
+<li><strong>일시</strong>: 2026. 8. 26.(수) 18:00~20:00 (2시간)</li>
+<li><strong>진행</strong>: 비대면 Zoom</li>
+<li><strong>강사</strong>: 김헌용 (신명중학교 영어 교사, 함께하는장애인교원노동조합 위원장)</li>
+<li><strong>실습 도구</strong>: Claude Desktop 앱(Code 탭), Claude Code CLI</li>
+</ul>
+<hr />
+<h3>이번 시간의 목표</h3>
+<ul>
+<li>Claude Desktop 앱의 Code 탭 환경을 구축함.</li>
+<li>터미널의 Claude Code CLI 환경을 구축함.</li>
+<li>작업 폴더를 지정하고 첫 업무 지시를 내림.</li>
+<li>처리 결과 요약을 음성(TTS)으로 확인함.</li>
+</ul>
+<p>이번 강의의 핵심 목표는 스크린 리더 사용자에게 최적화된 Claude Code 환경 셋업임. 오늘 구축한 환경이 이후 2~4회기의 행정업무 자동화와 수업 실습의 기본값이 됨.</p>
+<hr />
+<h3>진행 순서</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>시각</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18:00~18:08</td>
+<td>여는 말</td>
+</tr>
+<tr>
+<td>18:08~18:18</td>
+<td>사전 준비 점검</td>
+</tr>
+<tr>
+<td>18:18~18:40</td>
+<td>따라 하기 1. Desktop 앱 Code 탭 셋업</td>
+</tr>
+<tr>
+<td>18:40~18:55</td>
+<td>따라 하기 2. 폴더 지정과 첫 지시</td>
+</tr>
+<tr>
+<td>18:55~19:05</td>
+<td>휴식</td>
+</tr>
+<tr>
+<td>19:05~19:20</td>
+<td>따라 하기 3. 터미널 CLI 환경 셋업</td>
+</tr>
+<tr>
+<td>19:20~19:28</td>
+<td>따라 하기 4. 스크린 리더 모드 켜기</td>
+</tr>
+<tr>
+<td>19:28~19:38</td>
+<td>따라 하기 5. 두 도구로 동일한 폴더 다루기</td>
+</tr>
+<tr>
+<td>19:38~19:58</td>
+<td>따라 하기 6. 작업 결과 요약을 음성으로 듣기</td>
+</tr>
+<tr>
+<td>19:58~20:00</td>
+<td>과제 및 2회기 안내</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h3>여는 말</h3>
+<h4>앞선 13시간과 무엇이 다른가</h4>
+<ul>
+<li><strong>앞선 13시간</strong>: 프롬프트 엔지니어링, AI 윤리, 정보 접근과 활용. AI에게 질문하고 좋은 답변을 얻어내는 법.</li>
+<li><strong>남은 9시간</strong>: AI에게 내 컴퓨터의 파일과 폴더를 다루게 하고, 학교 업무 시스템을 대신 조작하게 만드는 법.</li>
+</ul>
+<p>챗봇과 에이전트의 결정적인 차이는 결과물이 남는 위치임.</p>
+<ul>
+<li><strong>챗봇</strong>: 대화창에 텍스트 답변을 보여주는 데서 멈춤. 공문 요약을 요청하면 화면에 요약글이 뜨지만, 그 내용을 한글 문서나 파일로 옮기는 일은 여전히 사용자 몫임.</li>
+<li><strong>에이전트</strong>: 지정된 폴더에 직접 들어가 파일을 읽고, 문서를 편집하고, 결과 파일(.hwpx, .md, .csv 등)을 폴더에 저장함. 탐색기를 열어 보면 파일이 실제로 생성되어 있음.</li>
+</ul>
+<p>이 차이가 학교 업무에서 중요한 이유:</p>
+<ul>
+<li>교사의 행정 업무는 화면 위의 대화로 끝나지 않음.</li>
+<li>공문을 열어 검토하고, 한글 서식을 채워 결재를 올리고, 나이스나 교무업무시스템에서 신청과 제출을 마쳐야 비로소 끝남.</li>
+<li>챗봇이 돕는 구간은 그 앞단의 초안 작성까지임. 실제 문서를 만들고 시스템을 조작하는 그다음 구간 전체가 이 9시간의 대상임.</li>
+</ul>
+<h4>4회기 커리큘럼의 흐름</h4>
+<ul>
+<li><strong>1회기, 작업 환경 셋업</strong>: Claude Desktop 앱(Code 탭)과 Claude Code CLI 환경을 구축하고, 작업 폴더 지정과 음성 요약 루프를 완성함.</li>
+<li><strong>2회기, 행정업무 자동화 기본</strong>: 업무 자동화 스킬을 설치하고, Chrome 확장과 연동해 나이스·K-에듀파인·교데통에 접속함.</li>
+<li><strong>3회기, 행정업무 자동화 심화</strong>: K-에듀파인의 결재 대기 공문을 추출해 음성으로 확인하고, 나이스 복무 신청을 반자동으로 처리함.</li>
+<li><strong>4회기, 수업과 평가</strong>: 수업·평가 자료를 제작하고, 각자의 직무에 맞춘 전용 스킬을 직접 만듦.</li>
+</ul>
+<p>환경 구축, 시스템 접속, 실무 조작, 맞춤형 창작의 네 단계임. 앞 회기의 환경이 갖춰지지 않으면 다음 단계 실습이 성립하지 않으므로, 오늘의 설치와 설정이 전체 과정의 밑바탕임.</p>
+<hr />
+<h3>사전 준비 점검</h3>
+<p>번호는 사전 준비 안내문과 같음.</p>
+<h4>1. EVPN 신청 상태</h4>
+<ul>
+<li><strong>필요한 이유</strong>: 자택에서 나이스·K-에듀파인·교데통에 접속하려면 교육청 원격업무지원서비스(EVPN) 승인이 필요함.</li>
+<li><strong>소요 기간</strong>: 부서장 결재를 거치므로 며칠이 걸림. 2회기(8/31) 실습 전까지 승인이 완료되어야 함.</li>
+<li><strong>신청 경로</strong>: 나이스의 [기본메뉴] &gt; [원격업무지원서비스]. 아직 신청 전이면 오늘 회기가 끝나는 즉시 신청함.</li>
+<li><strong>입력값</strong>: 사용기간은 최대(6개월), 시작일자는 신청 당일. VPN 전용 비밀번호를 설정하고 보안서약서에 동의함.</li>
+</ul>
+<h4>2~6. 계정과 설치</h4>
+<ol start="2">
+<li><strong>Claude Pro 계정 로그인</strong>: 센터가 지원하는 Pro 계정임. 무료 계정에서는 Desktop 앱에 Code 탭 자체가 나타나지 않으므로 플랜 확인이 가장 먼저임.</li>
+<li><strong>Claude Desktop 앱 설치</strong>: 최신 버전으로 설치되어 있는지 확인함.</li>
+<li><strong>Git 설치 여부</strong>: 아직 설치 전이면 따라 하기 1에서 함께 진행함.</li>
+<li><strong>Node.js와 Python 설치 여부</strong>: 명령줄 도구 실행에 필요한 런타임임.</li>
+<li><strong>홈 디렉터리 연습 폴더</strong>: 본인 업무와 관련된 공문 PDF 1개와 한글 문서(.hwpx 또는 .hwp) 1개가 들어 있어야 함.</li>
+</ol>
+<hr />
+<h3>두 도구를 함께 쓰는 이유</h3>
+<p>이 과정에서는 <strong>Claude Desktop 앱(Code 탭)</strong>과 <strong>Claude Code CLI(터미널)</strong> 두 가지를 모두 셋업함. 굳이 둘을 함께 다루는 이유는 각 도구의 쓰임새와 강점이 다르기 때문임.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Claude Desktop 앱 (Code 탭)</th>
+<th>Claude Code CLI (터미널)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>주요 쓰임새</strong></td>
+<td>긴 호흡의 작업, 생성물(아티팩트) 실시간 미리보기, 사용량 점검, 프로젝트 단위 작업</td>
+<td>폴더 하나에서 짧게 끝나는 단발성 작업, 여러 폴더를 오가는 작업, 여러 터미널을 띄운 병렬 작업</td>
+</tr>
+<tr>
+<td><strong>실행 방법</strong></td>
+<td>앱 실행 후 '폴더 선택' 버튼으로 작업 폴더 지정</td>
+<td>파일 탐색기에서 작업할 폴더를 열고 <code>Alt+T</code>로 터미널을 띄운 뒤 <code>claude</code> 실행</td>
+</tr>
+<tr>
+<td><strong>스크린 리더 조작</strong></td>
+<td>웹 탐색 명령과 Tab 이동이 그대로 통함. 대신 편집창·버튼·텍스트 영역을 오갈 때 가상 커서 전환이 필요함</td>
+<td>프롬프트 입력과 키패드 리뷰 탐색 중심임. 조작 체계가 단순한 대신 키패드 탐색에 익숙해야 함</td>
+</tr>
+<tr>
+<td><strong>체감 성능</strong></td>
+<td>구동과 업데이트에 시간이 다소 걸림</td>
+<td>메모장처럼 가볍게 열고 닫음</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>터미널이 편한 경우</strong>: 터미널을 띄운 바로 그 폴더만 작업 범위(컨텍스트)로 잡힘. 파일 탐색기에서 하위 폴더로 세분화해 자료를 관리한다면 이 방식이 군더더기가 없음.</li>
+<li><strong>앱이 편한 경우</strong>: 웹 결과물을 미리보기로 직접 확인해야 하거나, 하나의 프로젝트를 긴 호흡으로 다듬어 갈 때.</li>
+</ul>
+<p>'Code'라는 이름 때문에 프로그래밍 전용 도구로 생각하기 쉽지만, 실제로는 컴퓨터로 할 수 있는 일상 업무 대부분을 처리함. 문서 작성, 파일 변환, 웹 검색, 시스템 설정 변경까지 코딩 지식 없이 자연어 대화만으로 제어함.</p>
+<hr />
+<h3>따라 하기 1: Desktop 앱 Code 탭 셋업</h3>
+<p>오늘 실습 중 손이 가장 많이 가는 단계임. 순서를 건너뛰지 않음.</p>
+<ol>
+<li><strong>Code 탭 이동</strong>: Claude Desktop 앱을 실행하고, 좌측 상단 탭 영역에서 <code>Code</code> 탭 버튼을 눌러 이동.</li>
+<li><strong>Git 설치 안내 확인</strong>: 처음 진입하면 Git 설치 안내 대화상자가 자동으로 뜸. 대화상자에서 <strong>Git 다운로드</strong> 버튼을 누름.
+   - <strong>나중에</strong>를 선택하면 Git 연동이 되지 않아 다음 단계가 막힘. 반드시 <strong>Git 다운로드</strong>를 선택함.
+   - 사전 준비에서 이미 Git을 설치했으면 이 대화상자가 나타나지 않을 수 있음. 그러면 4번으로 바로 이동.</li>
+<li><strong>Git 설치 진행</strong>: 내려받은 설치 파일(<code>Git-x.x.x-64-bit.exe</code>)을 실행하고, 설치 마법사의 모든 화면에서 기본 설정 그대로 <strong>Next</strong> 또는 <strong>Install</strong>을 눌러 끝까지 설치.</li>
+<li><strong>설치 확인 요청</strong>: Code 탭으로 돌아와 하단 프롬프트 입력창에 확인을 요청.
+   <code>Git 설치를 마쳤는데 제대로 설치된 것인지 확인해 줘.</code></li>
+<li><strong>PowerShell 실행 권한 허용</strong>: Claude가 설치 상태를 확인하려고 PowerShell 명령 실행 권한을 요청함. <strong>거부</strong>, <strong>한 번만 허용</strong>, <strong>항상 허용</strong> 세 버튼 중 <strong>항상 허용</strong>을 선택. 이후 동일한 명령에는 다시 묻지 않음.</li>
+<li><strong>환경 변수 자동 설정</strong>: Git이 설치되어 있어도 Claude가 <code>bash.exe</code> 경로를 찾지 못하면 <code>CLAUDE_CODE_GIT_BASH_PATH</code> 환경 변수 설정 안내가 뜸. 옵션 1(PowerShell로 영구 설정)과 옵션 2(Windows GUI 설정)가 제시되면, 시스템 설정 창을 직접 열지 않고 입력창에 한 줄 적음.
+   <code>옵션 1로 네가 바로 설정해 줘.</code>
+   Claude가 PowerShell 명령으로 환경 변수를 설정함.</li>
+<li><strong>앱 완전 종료 후 재실행</strong>: 설정이 끝나면 앱을 완전히 닫고 다시 실행. <code>Alt+F4</code>로 창을 닫은 뒤, 작업 표시줄 알림 영역(트레이)의 Claude 아이콘에서 팝업 키(<code>Shift+F10</code>)를 눌러 <strong>종료</strong>를 선택하면 확실함.
+   - 환경 변수 안내가 처음부터 뜨지 않으면 Claude가 이미 설정을 마친 것이므로 그대로 진행함.</li>
+</ol>
+<p>여기까지 마치면 Code 탭이 정상적으로 열림.</p>
+<hr />
+<h3>따라 하기 2: 폴더 지정과 첫 지시</h3>
+<p>에이전트는 지정한 폴더를 작업 범위로 삼음. 폴더를 지정해야 결과 파일이 정확한 위치에 생성됨.</p>
+<ol>
+<li><strong>작업 폴더 선택</strong>: Code 탭 프롬프트 입력창 바로 위의 <strong>폴더 선택</strong> 버튼을 누름. 파일 선택 대화상자가 열림.</li>
+<li><strong>연습 폴더 지정</strong>: 홈 디렉터리에 미리 만들어 둔 연습 폴더로 이동한 뒤 <strong>폴더 선택</strong> 버튼을 누름. 입력창 상단에 폴더 이름이 표시되면 지정 완료.</li>
+<li><strong>첫 지시 전송</strong>: 하단 입력창에 첫 지시를 입력하고 전송.
+   <code>이 폴더에 어떤 파일이 있는지 읽고 정리해 줘.</code></li>
+<li><strong>결과 확인</strong>: 연습 폴더에 넣어 둔 공문 PDF와 한글 문서를 인식하고 파일 이름과 형식을 설명하면 정상임.</li>
+</ol>
+<h4>샌드박스와 권한 관리</h4>
+<ul>
+<li><strong>작동 범위</strong>: 에이전트는 격리된 작업 영역(샌드박스) 안에서만 작동함. 지정된 작업 폴더 안에서는 자유롭게 문서를 읽고 씀.</li>
+<li><strong>승인이 필요한 경우</strong>: 폴더 밖 시스템에 접근하거나 프로그램을 설치할 때. 승인 창이 뜨면 요청 내용을 확인하고 허용 여부를 결정함.</li>
+<li><strong>자동 모드</strong>: 작업 폴더 안에서 반복적으로 뜨는 승인 창을 줄이는 설정임. 입력창 좌측 하단의 <strong>편집 수락</strong> 풀다운 메뉴에서 <strong>자동</strong>을 선택하고, 확인 창에서 <strong>자동 모드 활성화</strong>를 누름. 지정한 작업 폴더 내부에만 적용되고 폴더 외부 시스템 영역에는 적용되지 않음.</li>
+</ul>
+<blockquote>
+<p><strong>참고</strong>: Pro 계정인데도 '자동' 모드가 메뉴에 보이지 않으면 앱이 구버전임. 좌측 상단 메뉴의 <strong>업데이트 확인</strong>으로 최신 버전을 받음.</p>
+</blockquote>
+<h4>파일 경로를 정확히 전달하는 요령</h4>
+<ul>
+<li><strong>방법</strong>: 파일 탐색기에서 대상 파일을 선택하고 <code>Ctrl+Shift+C</code>를 누르면 전체 경로가 클립보드에 복사됨. 이를 입력창에 붙여넣고 지시함.</li>
+<li><strong>효과</strong>: 폴더에 파일이 여러 개일 때 엉뚱한 파일을 건드리지 않음.</li>
+<li><strong>적용 범위</strong>: 이후 세 회기 내내 씀.</li>
+</ul>
+<hr />
+<h3>따라 하기 3: 터미널 CLI 환경 셋업</h3>
+<p>같은 Claude 에이전트를 터미널에서 가볍게 구동하는 절차임.</p>
+<ol>
+<li><strong>작업 폴더 열기</strong>: 파일 탐색기에서 홈 디렉터리의 연습 폴더로 들어감.</li>
+<li><strong>터미널 열기</strong>: 파일이 선택되지 않은 빈 영역에서 팝업 키(또는 <code>Shift+F10</code>)를 눌러 폴더 컨텍스트 메뉴를 열고 <strong>터미널에서 열기</strong>를 선택. 단축키는 <code>Alt+T</code>.</li>
+<li><strong>Claude Code 실행</strong>: PowerShell 터미널이 열리면 다음을 입력하고 <code>Enter</code>.
+   <code>bash
+   claude</code></li>
+<li><strong>로그인 인증</strong>: 처음 실행하면 브라우저 인증 창이 열림. Claude 계정으로 로그인을 마치고 터미널로 돌아옴.</li>
+<li><strong>동작 확인</strong>: 프롬프트가 나타나면 간단한 지시를 보내 응답이 출력되는지 확인.</li>
+</ol>
+<p>터미널을 연 바로 그 폴더가 자동으로 작업 범위가 되므로, 앱처럼 폴더를 별도로 지정하지 않음.</p>
+<hr />
+<h3>따라 하기 4: 스크린 리더 모드 켜기</h3>
+<ul>
+<li><strong>문제</strong>: 터미널 화면에는 테두리 선이나 진행 애니메이션 같은 장식 문자가 포함되어 있어, 키패드로 탐색할 때 불필요한 음성이 많이 낭독됨.</li>
+<li><strong>해결</strong>: Claude Code가 이를 평문으로 전환해 주는 전용 <strong>스크린 리더 모드</strong>(<code>axScreenReader</code>)를 기본 제공함.</li>
+</ul>
+<p>터미널 프롬프트에 한 줄 적음.</p>
+<pre><code>스크린 리더 모드 켜 줘.
+</code></pre>
+<ul>
+<li>Claude가 내부 설정을 감지해 즉시 활성화함.</li>
+<li>전역(Global) 설정으로 저장되므로, 한 번 켜 두면 터미널을 다시 열거나 다른 폴더에서 작업할 때도 유지됨.</li>
+<li>설정 전후로 키패드 탐색을 해 보아 장식 문자가 사라졌는지 확인함.</li>
+</ul>
+<hr />
+<h3>따라 하기 5: 두 도구로 동일한 폴더 다루기</h3>
+<p>Desktop 앱과 터미널 CLI가 같은 컴퓨터의 같은 폴더를 다룬다는 것을 확인하는 단계임.</p>
+<ol>
+<li><strong>터미널에서 파일 목록 조회</strong>: 앱과 터미널이 모두 연습 폴더를 작업 범위로 잡은 상태에서, 터미널 프롬프트에 따라 하기 2와 동일한 지시를 보냄.
+   <code>이 폴더에 어떤 파일이 있는지 읽고 정리해 줘.</code></li>
+<li><strong>결과 비교</strong>: Desktop 앱에서 확인했던 것과 동일한 파일 목록이 출력되는지 확인.</li>
+<li><strong>터미널에서 파일 생성</strong>: 터미널에 다음과 같이 지시해 새 문서를 만듦.
+   <code>오늘 배운 핵심 내용을 세 줄로 정리해서 1회기 정리.md 파일로 저장해 줘.</code></li>
+<li><strong>탐색기에서 생성 파일 확인</strong>: 파일 탐색기에서 연습 폴더를 열어 <code>1회기 정리.md</code>가 실제로 생성되었는지 확인. 챗봇과 에이전트의 차이를 직접 확인하는 단계임.</li>
+</ol>
+<p>두 도구는 동일한 로컬 파일 시스템을 제어함. 한쪽에서 만든 파일을 다른 쪽에서 즉시 읽고 편집하므로, 작업의 성격과 호흡에 맞추어 편한 쪽을 고르면 됨.</p>
+<hr />
+<h3>따라 하기 6: 작업 결과 요약을 음성으로 듣기</h3>
+<ul>
+<li><strong>문제</strong>: 에이전트가 복잡한 작업을 마치면 터미널에 긴 결과 텍스트가 출력됨. 매번 키패드로 긴 화면을 훑어야 함.</li>
+<li><strong>해결</strong>: 작업 완료 시 핵심 요약을 음성(TTS)으로 브리핑해 주는 <code>agent-cli-tts-summary</code> 스킬을 설치함. 이 설정 하나로 이후 세 회기의 실습 피로도가 줄어듦.</li>
+<li><strong>비용</strong>: 기본 음성은 Windows 내장 음성 엔진을 쓰므로 별도의 API 키나 비용이 들지 않음. 더 자연스러운 음성이 필요하면 나중에 Gemini나 ElevenLabs 키를 넣을 수 있으나 오늘은 기본값으로 둠.</li>
+</ul>
+<ol>
+<li><strong>스킬 설치 지시</strong>: 터미널 또는 Desktop 앱 입력창에 전송.
+   <code>https://github.com/Engccer/skills-for-the-blind 의 agent-cli-tts-summary 스킬을 설치해 줘.</code></li>
+<li><strong>실행 권한 승인</strong>: 스킬 다운로드와 명령 실행 승인 대화상자가 나타나면 내용을 확인하고 허용.</li>
+<li><strong>TTS 훅 설정 요청</strong>: 설치가 끝나면 스킬 지침에 따른 환경 설정을 지시.
+   <code>이 스킬대로 TTS 요약 루프를 설정해 줘.</code></li>
+<li><strong>자동 설정 완료</strong>: 에이전트가 종료 훅(Hook)과 스크립트 경로 설정을 자동으로 처리함. 중간에 권한 요청이 뜨면 허용.</li>
+<li><strong>음성 출력 테스트</strong>: 설정이 끝나면 간단한 작업을 지시.
+   <code>지금 이 폴더에 있는 파일 개수를 세어 줘.</code></li>
+<li><strong>음성 브리핑 확인</strong>: 작업이 끝나는 순간 요약이 음성으로 흘러나오는지 확인.</li>
+</ol>
+<p>음성이 재생되면 오늘 1회기 목표에 도달한 것임.</p>
+<hr />
+<h3>과제 및 2회기 안내</h3>
+<p>2회기(8/31) 실습을 위해 다섯 가지를 갖춤. 하나라도 빠지면 다음 회기 시스템 접속 실습이 진행되지 않음.</p>
+<ol>
+<li><strong>EVPN 승인 및 접속 확인</strong>: 승인이 완료되면 자택 PC에서 <code>https://evpn.sen.go.kr</code>에 접속해 웹 로그인과 클라이언트 연결을 확인함. 서울 외 지역은 해당 시도 교육청 EVPN 주소를 씀.</li>
+<li><strong>Claude in Chrome 확장 프로그램 설치</strong>: 브라우저 기반 학교 행정 시스템을 제어하는 데 필요함.</li>
+<li><strong>PowerShell 7 설치</strong>: K-에듀파인의 문서 팝업 창을 제어할 때 씀.</li>
+<li><strong>Gemini API 키 발급</strong>: Google AI Studio에서 무료 티어로 발급함.</li>
+<li><strong>교육행정 전자서명(EPKI) 인증서 준비</strong>: 실습 노트북에 본인 인증서가 등록되어 있는지 확인함.</li>
+</ol>
+<p>필요한 프로그램 설치나 상태 확인은 오늘 셋업한 에이전트에게 자연어로 맡기는 편이 빠름.</p>
+<pre><code>PowerShell 7이 설치되어 있는지 확인하고, 없으면 설치해 줘.
+</code></pre>
+<p>이렇게 에이전트에게 설정을 직접 시켜 보는 과정 자체가 AI와 함께 일하는 연습임.</p>
+<button type="button" class="close" data-close>닫기</button>
+</article>
+<article id="s3" hidden>
+<button type="button" class="close" data-close>닫기</button>
+<h2 tabindex="-1">2회기: 행정업무 자동화 기본</h2>
+<p>원고를 준비하고 있습니다.</p>
+<button type="button" class="close" data-close>닫기</button>
+</article>
+<article id="s4" hidden>
+<button type="button" class="close" data-close>닫기</button>
+<h2 tabindex="-1">3회기: 행정업무 자동화 심화</h2>
+<p>원고를 준비하고 있습니다.</p>
+<button type="button" class="close" data-close>닫기</button>
+</article>
+<article id="s5" hidden>
+<button type="button" class="close" data-close>닫기</button>
+<h2 tabindex="-1">4회기: 수업과 평가</h2>
+<p>원고를 준비하고 있습니다.</p>
+<button type="button" class="close" data-close>닫기</button>
+</article>
+</main>
+<script>
+(function () {
+  var menu = document.getElementById('menu');
+  var opener = null;
+  var sfx = { open: new Audio('sfx/open.mp3'), close: new Audio('sfx/close.mp3') };
+  function play(name) { var a = sfx[name]; a.currentTime = 0; a.play().catch(function () {}); }
+
+  function open(id, sound) {
+    var art = document.getElementById(id);
+    if (!art) return;
+    opener = menu.querySelector('[data-open="' + id + '"]');
+    menu.hidden = true;
+    art.hidden = false;
+    if (sound) play('open');
+    if (location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+    art.querySelector('h2').focus();
+    window.scrollTo(0, 0);
+  }
+  function close(sound) {
+    var art = document.querySelector('article:not([hidden])');
+    if (!art) return;
+    art.hidden = true;
+    menu.hidden = false;
+    if (sound) play('close');
+    if (location.hash) history.pushState(null, '', location.pathname);
+    (opener || menu.querySelector('button')).focus();
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.open) open(b.dataset.open, true);
+    else if (b.hasAttribute('data-close')) close(true);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.hidden) close(true);
+  });
+  window.addEventListener('popstate', function () {
+    var id = location.hash.slice(1);
+    if (id) open(id, false); else close(false);
+  });
+  if (location.hash) open(location.hash.slice(1), false);
+})();
+</script>
+</body>
+</html>

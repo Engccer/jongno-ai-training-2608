@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>재직자 AI 활용 직무향상과정(교사)</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #fff; --line: #888; --code: #f2f2f2; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #121212; --code: #222; } }
+  html { font-size: 112.5%; }
+  body { margin: 0; padding: 1rem; max-width: 46rem; margin-inline: auto; font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; line-height: 1.7; color: var(--fg); background: var(--bg); word-break: keep-all; overflow-wrap: anywhere; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.35rem; margin-top: 1.5rem; }
+  h3 { font-size: 1.2rem; margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  h4 { font-size: 1.05rem; }
+  #menu { list-style: none; padding: 0; margin: 1.5rem 0; }
+  #menu li + li { margin-top: .75rem; }
+  button { font: inherit; color: inherit; background: var(--bg); border: 2px solid var(--fg); border-radius: .5rem; padding: .75rem 1rem; min-height: 44px; cursor: pointer; }
+  #menu button { width: 100%; text-align: left; font-size: 1.1rem; }
+  .close { margin: 1rem 0; }
+  button:hover { background: var(--code); }
+  :focus-visible { outline: 3px solid #0a66ff; outline-offset: 2px; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid var(--line); padding: .4rem .6rem; text-align: left; vertical-align: top; }
+  pre, code { font-family: Consolas, "D2Coding", monospace; font-size: .95em; }
+  pre { background: var(--code); padding: .75rem; overflow-x: auto; }
+  code { background: var(--code); padding: 0 .2em; }
+  pre code { padding: 0; }
+  blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 4px solid var(--line); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>재직자 AI 활용 직무향상과정(교사)</h1>
+<p>종로구시각장애인취업역량강화센터 · 김헌용 담당 4회기(2026. 8. 26.~9. 5.)</p>
+<ul id="menu">
+{{BUTTONS}}
+</ul>
+{{ARTICLES}}
+</main>
+<script>
+(function () {
+  var menu = document.getElementById('menu');
+  var opener = null;
+  var sfx = { open: new Audio('sfx/open.mp3'), close: new Audio('sfx/close.mp3') };
+  function play(name) { var a = sfx[name]; a.currentTime = 0; a.play().catch(function () {}); }
+
+  function open(id, sound) {
+    var art = document.getElementById(id);
+    if (!art) return;
+    opener = menu.querySelector('[data-open="' + id + '"]');
+    menu.hidden = true;
+    art.hidden = false;
+    if (sound) play('open');
+    if (location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+    art.querySelector('h2').focus();
+    window.scrollTo(0, 0);
+  }
+  function close(sound) {
+    var art = document.querySelector('article:not([hidden])');
+    if (!art) return;
+    art.hidden = true;
+    menu.hidden = false;
+    if (sound) play('close');
+    if (location.hash) history.pushState(null, '', location.pathname);
+    (opener || menu.querySelector('button')).focus();
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.open) open(b.dataset.open, true);
+    else if (b.hasAttribute('data-close')) close(true);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.hidden) close(true);
+  });
+  window.addEventListener('popstate', function () {
+    var id = location.hash.slice(1);
+    if (id) open(id, false); else close(false);
+  });
+  if (location.hash) open(location.hash.slice(1), false);
+})();
+</script>
+</body>
+</html>
