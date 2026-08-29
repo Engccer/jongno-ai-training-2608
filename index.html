@@ -86,20 +86,17 @@
 <p>Code 탭을 처음 열면 <strong>Git 설치 안내 대화상자</strong>가 자동으로 뜹니다. 대화상자 안의 <strong>Git 다운로드</strong> 버튼을 누르고, 내려받은 설치 파일을 실행해 모든 화면에서 기본 설정 그대로 Next 또는 Install을 눌러 끝까지 설치합니다.</p>
 <p><strong>「나중에」 버튼을 누르지 마세요.</strong> Git 없이 진행되어 다음 단계가 막힙니다.</p>
 <p><strong>확인</strong>: 설치를 마친 뒤 Code 탭으로 돌아와 하단 입력창에 아래 문장을 그대로 붙여넣고 보냅니다.</p>
-<blockquote>
-<p>git 설치를 마쳤는데 제대로 설치된 것인지 확인해 줘.</p>
-</blockquote>
+<button type="button" class="copy" data-copy>복사</button><pre><code>git 설치를 마쳤는데 제대로 설치된 것인지 확인해 줘.
+</code></pre>
 <p>Claude가 확인을 위해 PowerShell 명령을 실행하겠다며 권한을 묻습니다. <strong>항상 허용</strong>을 누르세요. 설치가 확인됐다는 답이 오면 된 것입니다.</p>
 <p>환경 변수를 설정해야 한다는 안내가 나오면 시스템 설정 창을 직접 건드리지 마시고 입력창에 아래 한 줄을 보내세요.</p>
-<blockquote>
-<p>옵션 1로 네가 바로 설정해 줘.</p>
-</blockquote>
+<button type="button" class="copy" data-copy>복사</button><pre><code>PowerShell로 환경 변수를 영구 설정하는 방법으로 네가 바로 해 줘.
+</code></pre>
 <p>설정이 끝나면 앱을 완전히 종료한 뒤 다시 실행합니다. <code>Alt+F4</code>로 창을 닫고, 작업 표시줄 알림 영역의 Claude 아이콘에서 <code>Shift+F10</code>으로 메뉴를 열어 <strong>종료</strong>를 선택합니다.</p>
 <h4>5. Node.js와 Python 설치</h4>
 <p>스킬 설치와 문서 파싱에 필요합니다. 4번까지 마치셨으면 입력창에 아래를 그대로 붙여넣으세요.</p>
-<blockquote>
-<p>이 컴퓨터에 Node.js와 Python이 설치돼 있는지 확인하고, 없으면 설치해 줘. 설치가 끝나면 각각의 버전을 알려 줘.</p>
-</blockquote>
+<button type="button" class="copy" data-copy>복사</button><pre><code>이 컴퓨터에 Node.js와 Python이 설치돼 있는지 확인하고, 없으면 설치해 줘. 설치가 끝나면 각각의 버전을 알려 줘.
+</code></pre>
 <p>도중에 권한 요청이 뜨면 내용을 읽고 허용합니다. 마지막에 두 프로그램의 버전이 나오면 설치된 것입니다.</p>
 <h4>6. 홈 디렉터리에 연습 폴더 만들기</h4>
 <p>홈 디렉터리에 폴더를 하나 만들고 이름을 「연습」으로 붙입니다. Windows에서 홈 디렉터리는 <code>C:\Users\&lt;본인 계정 이름&gt;</code>이며, 파일 탐색기에는 「사용자」 폴더 아래 본인 계정 이름으로 표시됩니다. 파일 탐색기에서 <code>Alt+D</code>로 주소창에 이동해 <code>%USERPROFILE%</code>을 입력하고 Enter를 누르면 바로 열립니다.</p>
@@ -118,15 +115,13 @@
 </code></pre>
 <p>페이지에서 <strong>Chrome에 추가</strong> 버튼을 누르고, 설치가 끝나면 확장을 열어 Claude 계정으로 로그인합니다.</p>
 <p><strong>확인</strong>: Chrome이 실행된 상태에서 Claude 입력창에 <code>/chrome</code>을 보내 연결을 켠 뒤 아래를 보냅니다.</p>
-<blockquote>
-<p>지금 열려 있는 크롬 탭 목록을 읽어 줘.</p>
-</blockquote>
+<button type="button" class="copy" data-copy>복사</button><pre><code>지금 열려 있는 크롬 탭 목록을 읽어 줘.
+</code></pre>
 <p>탭 목록이 나오면 연결된 것입니다. 처음 연결에는 시간이 걸릴 수 있으니 응답이 없으면 잠시 뒤 한 번 더 시도해 보세요.</p>
 <h4>8. PowerShell 7 설치</h4>
 <p>K-에듀파인의 결재 문서 창을 다루는 데 필요합니다. 입력창에 아래를 보내세요.</p>
-<blockquote>
-<p>PowerShell 7이 설치돼 있는지 확인하고, 없으면 설치해 줘.</p>
-</blockquote>
+<button type="button" class="copy" data-copy>복사</button><pre><code>PowerShell 7이 설치돼 있는지 확인하고, 없으면 설치해 줘.
+</code></pre>
 <p><strong>확인</strong>: 설치 후 버전이 7 이상으로 나오면 된 것입니다.</p>
 <h4>9. Gemini API 키 발급</h4>
 <p>문서 파싱과 음성 변환 실습에 씁니다. 무료로 쓸 수 있는 범위 안에서 진행하므로 요금은 들지 않습니다.</p>
@@ -385,11 +380,11 @@
 <li>
 <p><strong>PowerShell 실행 권한 허용</strong>: Claude가 설치 상태를 확인하려고 PowerShell 명령 실행 권한을 요청함. <strong>거부</strong>, <strong>한 번만 허용</strong>, <strong>항상 허용</strong> 세 버튼 중 <strong>항상 허용</strong>을 선택. 이후 동일한 명령에는 다시 묻지 않음.</p>
 </li>
-<li><strong>환경 변수 자동 설정</strong>: Git이 설치되어 있어도 Claude가 <code>bash.exe</code> 경로를 찾지 못하면 <code>CLAUDE_CODE_GIT_BASH_PATH</code> 환경 변수 설정 안내가 뜸. 옵션 1(PowerShell로 영구 설정)과 옵션 2(Windows GUI 설정)가 제시되면, 시스템 설정 창을 직접 열지 않고 입력창에 한 줄 적음.<button type="button" class="copy" data-copy>복사</button><pre><code>옵션 1로 네가 바로 설정해 줘.
+<li><strong>환경 변수 자동 설정</strong>: Git이 설치되어 있어도 Claude가 <code>bash.exe</code> 경로를 찾지 못하면 <code>CLAUDE_CODE_GIT_BASH_PATH</code> 환경 변수 설정 안내가 뜸. 보통 PowerShell로 설정하는 방법과 Windows 설정 창에서 직접 넣는 방법을 함께 제시함. 설정 창을 직접 열지 않고 입력창에 한 줄 적음.<button type="button" class="copy" data-copy>복사</button><pre><code>PowerShell로 환경 변수를 영구 설정하는 방법으로 네가 바로 해 줘.
 </code></pre>
 </li>
 </ol>
-<p>Claude가 PowerShell 명령으로 환경 변수를 설정함.
+<p>Claude가 PowerShell 명령으로 환경 변수를 설정함. 안내에 붙은 번호는 그때그때 다르므로 번호 대신 방법을 말함.
 7. <strong>앱 완전 종료 후 재실행</strong>: 설정이 끝나면 앱을 완전히 닫고 다시 실행. <code>Alt+F4</code>로 창을 닫은 뒤, 작업 표시줄 알림 영역(트레이)의 Claude 아이콘에서 팝업 키(<code>Shift+F10</code>)를 눌러 <strong>종료</strong>를 선택하면 확실함.
    - 환경 변수 안내가 처음부터 뜨지 않으면 Claude가 이미 설정을 마친 것이므로 그대로 진행함.</p>
 <p>여기까지 마치면 Code 탭이 정상적으로 열림.</p>
