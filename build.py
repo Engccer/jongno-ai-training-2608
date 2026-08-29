@@ -45,20 +45,11 @@ def add_copy_buttons(body: str) -> str:
     복사본에 섞인다. 실제 복사는 스크립트가 textContent로 하므로 블록 안의 <a>는
     그대로 살아 있고(링크 동작 유지), 클립보드에는 태그 없는 평문만 들어간다.
 
-    이름을 「복사」로만 두면 Tab으로 훑을 때 같은 이름의 버튼이 서른 개 늘어서
-    무엇을 복사하는 버튼인지 알 수 없다. 눈에 보이는 글자는 짧게 두고 내용 앞부분을
-    aria-label로 붙인다.
+    이름은 「복사」뿐이다. 무엇을 복사하는지는 바로 뒤 블록이 말해 주므로 내용 일부를
+    이름에 덧붙이지 않는다(저자 지시 2026-08-30).
     """
-    def repl(m):
-        snippet = re.sub(r'<[^>]+>', '', m.group(1))
-        snippet = html.unescape(snippet)
-        snippet = re.sub(r'\s+', ' ', snippet).strip()
-        if len(snippet) > 34:
-            snippet = snippet[:34] + '…'
-        label = html.escape(f"복사: {snippet}", quote=True)
-        return (f'<button type="button" class="copy" data-copy aria-label="{label}">복사</button>'
-                + m.group(0))
-    return CODE_BLOCK.sub(repl, body)
+    return CODE_BLOCK.sub(
+        lambda m: '<button type="button" class="copy" data-copy>복사</button>' + m.group(0), body)
 
 
 INDENTED_FENCE = re.compile(r'^([ \t]+)```[^\n]*\n(.*?)^[ \t]*```[ \t]*$', re.M | re.S)
