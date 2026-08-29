@@ -25,18 +25,31 @@ SECTIONS = [
 URL_RE = re.compile(r"""(?:^|(?<=[>\s]))(https?://[^\s<>"']+?)(?=[.,)\]]*(?:\s|<|$))""", re.M)
 
 def linkify(body: str) -> str:
+    # 링크의 접근 가능한 이름에는 URL 말고 아무것도 넣지 않는다. 스크린 리더 가상 커서는
+    # DOM 텍스트가 아니라 접근 가능한 이름을 복사하므로, 새 탭 안내를 sr-only span으로 넣든
+    # aria-label로 넣든 복사본에 그대로 딸려 나와 붙여넣을 주소와 지시문을 깨뜨린다
+    # (센스리더 실측 2026-08-30, 두 방식 모두 재현). 새 탭 안내는 페이지 머리말에 한 번만 둔다.
+    return URL_RE.sub(
+        lambda m: f'<a href="{m.group(1)}" target="_blank" rel="noopener">{m.group(1)}</a>', body)
+
+
+# 목록 항목 안에 들여쓴 ``` 펜스는 fenced_code가 처리하지 못하고 인라인 <code>로 흘러
+# 지시문이 본문에 묻힌다(열 0의 펜스만 처리하는 전처리기다). 목록 안에서 <pre> 블록을 얻는
+# 방법은 8칸 들여쓰기뿐이라, 정본의 펜스 표기는 그대로 두고 여기서 바꿔 넣는다.
+INDENTED_FENCE = re.compile(r'^([ \t]+)```[^\n]*\n(.*?)^[ \t]*```[ \t]*$', re.M | re.S)
+
+def unfence_in_lists(text: str) -> str:
     def repl(m):
-        url = m.group(1)
-        # 새 탭 안내를 aria-label로 준다. 낭독 전용 span으로 넣으면 화면에는 안 보여도
-        # 선택·복사에는 딸려 가서, 통째로 복사해 에이전트에 붙여넣는 지시문이 깨진다.
-        # 라벨이 URL 전문을 그대로 담으므로 눈에 보이는 텍스트를 가리지도 않는다.
-        label = html.escape(f"{url}, 새 탭에서 열림", quote=True)
-        return f'<a href="{url}" target="_blank" rel="noopener" aria-label="{label}">{url}</a>'
-    return URL_RE.sub(repl, body)
+        indent, inner = m.group(1), m.group(2)
+        lines = [l[len(indent):] if l.startswith(indent) else l.lstrip()
+                 for l in inner.rstrip('\n').split('\n')]
+        return '\n' + '\n'.join(' ' * 8 + l if l.strip() else '' for l in lines) + '\n'
+    return INDENTED_FENCE.sub(repl, text)
 
 def render(path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     text = re.sub(r"^# .*\n", "", text, count=1)          # 문서 제목은 버튼·h2가 대신함
+    text = unfence_in_lists(text)
     body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
     for lv in (5, 4, 3, 2):                                 # 페이지 h1 아래로 한 단계씩 내림
         body = body.replace(f"<h{lv}>", f"<h{lv+1}>").replace(f"</h{lv}>", f"</h{lv+1}>")
