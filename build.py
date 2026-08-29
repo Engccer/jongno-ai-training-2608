@@ -36,6 +36,31 @@ def linkify(body: str) -> str:
 # 목록 항목 안에 들여쓴 ``` 펜스는 fenced_code가 처리하지 못하고 인라인 <code>로 흘러
 # 지시문이 본문에 묻힌다(열 0의 펜스만 처리하는 전처리기다). 목록 안에서 <pre> 블록을 얻는
 # 방법은 8칸 들여쓰기뿐이라, 정본의 펜스 표기는 그대로 두고 여기서 바꿔 넣는다.
+CODE_BLOCK = re.compile(r'<pre><code[^>]*>(.*?)</code></pre>', re.S)
+
+def add_copy_buttons(body: str) -> str:
+    """지시문·주소 블록 바로 위에 복사 버튼을 단다.
+
+    버튼은 <pre> 바깥에 둔다. 안에 넣으면 버튼 글자가 블록 본문의 일부가 되어
+    복사본에 섞인다. 실제 복사는 스크립트가 textContent로 하므로 블록 안의 <a>는
+    그대로 살아 있고(링크 동작 유지), 클립보드에는 태그 없는 평문만 들어간다.
+
+    이름을 「복사」로만 두면 Tab으로 훑을 때 같은 이름의 버튼이 서른 개 늘어서
+    무엇을 복사하는 버튼인지 알 수 없다. 눈에 보이는 글자는 짧게 두고 내용 앞부분을
+    aria-label로 붙인다.
+    """
+    def repl(m):
+        snippet = re.sub(r'<[^>]+>', '', m.group(1))
+        snippet = html.unescape(snippet)
+        snippet = re.sub(r'\s+', ' ', snippet).strip()
+        if len(snippet) > 34:
+            snippet = snippet[:34] + '…'
+        label = html.escape(f"복사: {snippet}", quote=True)
+        return (f'<button type="button" class="copy" data-copy aria-label="{label}">복사</button>'
+                + m.group(0))
+    return CODE_BLOCK.sub(repl, body)
+
+
 INDENTED_FENCE = re.compile(r'^([ \t]+)```[^\n]*\n(.*?)^[ \t]*```[ \t]*$', re.M | re.S)
 
 def unfence_in_lists(text: str) -> str:
@@ -51,6 +76,7 @@ def render(path: Path) -> str:
     text = re.sub(r"^# .*\n", "", text, count=1)          # 문서 제목은 버튼·h2가 대신함
     text = unfence_in_lists(text)
     body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
+    body = add_copy_buttons(body)
     for lv in (5, 4, 3, 2):                                 # 페이지 h1 아래로 한 단계씩 내림
         body = body.replace(f"<h{lv}>", f"<h{lv+1}>").replace(f"</h{lv}>", f"</h{lv+1}>")
     body = body.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")
