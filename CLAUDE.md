@@ -8,7 +8,7 @@
 
 - 저장소: https://github.com/Engccer/jongno-ai-training-2608
 - 배포 URL: https://engccer.github.io/jongno-ai-training-2608/
-- 콘텐츠 정본: `G:\내 드라이브\KHY\Lectures\2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)\`의 `사전 준비 안내문.md`와 `5. 강의 원고\*.md`. 이 저장소는 그 내용을 옮긴 것이다.
+- 콘텐츠 정본: `G:\내 드라이브\KHY\Lectures\2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)\`의 `사전 준비 안내문.md`와 `5. 강의 원고\*.md`. 이 저장소는 그 내용을 옮긴 것이다. <!-- sanitize: allow 원고 정본 위치. 이 저장소의 존재 이유라 일반화 불가 -->
 
 ## 구조
 
@@ -23,4 +23,4 @@
 
 ## 접근성
 
-글로벌 접근성 헌장(`~/.claude/ACCESSIBILITY.md`)을 따른다. landmark는 `<main>` 하나, ARIA 없음, 네이티브 `<button>`·heading 계층(h1 페이지 → h2 문서 제목 → h3 원고 `##`)만으로 탐색한다. 원고 heading은 build.py가 한 단계씩 내린다.
+글로벌 접근성 헌장(`~/.claude/ACCESSIBILITY.md`)을 따른다. landmark는 `<main>` 하나, ARIA 없음, 네이티브 `<button>`·heading 계층(h1 페이지 → h2 문서 제목 → h3 원고 `##`)만으로 탐색한다. 원고 heading은 build.py가 한 단계씩 내린다. <!-- sanitize: allow 준수 기준 문서 참조. 경로가 곧 기준의 이름 -->

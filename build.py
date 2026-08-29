@@ -3,14 +3,14 @@ import html, re
 from pathlib import Path
 import markdown
 
-SRC = Path(r"G:\내 드라이브\KHY\Lectures\2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)")
+SRC = Path(r"G:\내 드라이브\KHY\Lectures\2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)")  # sanitize: allow 원고 정본 위치. 빌드 스크립트의 기능 자체라 일반화 불가
 OUT = Path(__file__).with_name("index.html")
 
 # (버튼 제목, 정본 파일, 게시 여부)
 SECTIONS = [
     ("사전 준비 안내", SRC / "사전 준비 안내문.md", True),
     ("1회기: 작업 환경 셋업", SRC / "5. 강의 원고/강의 원고 1회기 작업 환경 셋업.md", True),
-    ("2회기: 행정업무 자동화 기본", SRC / "5. 강의 원고/강의 원고 2회기 행정업무 자동화 기본.md", False),
+    ("2회기: 행정업무 자동화 기본", SRC / "5. 강의 원고/강의 원고 2회기 행정업무 자동화 기본.md", True),
     ("3회기: 행정업무 자동화 심화", SRC / "5. 강의 원고/강의 원고 3회기 행정업무 자동화 심화.md", False),
     ("4회기: 수업과 평가", SRC / "5. 강의 원고/강의 원고 4회기 수업과 평가.md", False),
 ]
