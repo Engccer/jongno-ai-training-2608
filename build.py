@@ -1,4 +1,5 @@
 """드라이브의 마크다운 정본을 읽어 index.html을 생성한다. 원고를 고치면 다시 실행한다."""
+# sanitize: allow-file 원고 정본이 놓인 Google Drive 마운트 지점을 찾는 것이 이 스크립트의 기능이라 경로를 일반화할 수 없다
 import html, re
 from pathlib import Path
 import markdown
