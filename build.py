@@ -3,7 +3,14 @@ import html, re
 from pathlib import Path
 import markdown
 
-SRC = Path(r"G:\내 드라이브\KHY\Lectures\2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)")  # sanitize: allow 원고 정본 위치. 빌드 스크립트의 기능 자체라 일반화 불가
+# 원고 정본은 같은 Google Drive를 윈도우와 맥에서 각각 다른 지점으로 마운트한다.
+# 어느 머신에서 돌리든 존재하는 쪽을 고른다.  # sanitize: allow 원고 정본 위치. 빌드 스크립트의 기능 자체라 일반화 불가
+_REL = "KHY/Lectures/2608~2609 종로시각장애인복지관 재직자 AI 활용 직무향상과정(교사)"
+_ROOTS = [Path(r"G:\내 드라이브")]                                   # Windows
+_ROOTS += sorted((Path.home() / "Library/CloudStorage").glob("GoogleDrive-*/My Drive"))  # macOS
+SRC = next((r / _REL for r in _ROOTS if (r / _REL).is_dir()), None)
+if SRC is None:
+    raise SystemExit("원고 정본 폴더를 찾지 못했습니다. Google Drive가 마운트돼 있는지 확인하세요.")
 OUT = Path(__file__).with_name("index.html")
 
 # (버튼 제목, 정본 파일, 게시 여부)

@@ -12,7 +12,7 @@
 
 ## 구조
 
-- `build.py`: 드라이브의 마크다운을 읽어 `index.html`을 생성한다. 원고를 고치면 `python build.py` 후 commit·push. `SECTIONS`의 세 번째 값이 `False`인 회기는 본문 대신 「원고를 준비하고 있습니다.」만 실린다. 회기 원고가 확정되면 `True`로 바꾼다.
+- `build.py`: 드라이브의 마크다운을 읽어 `index.html`을 생성한다. 원고를 고치면 `python build.py` 후 commit·push. 정본 폴더는 윈도우와 맥에서 마운트 지점이 달라 `_ROOTS`에서 존재하는 쪽을 고른다. **한쪽 머신에서 push한 뒤 반대쪽 클론을 pull하지 않으면 그 머신의 build.py가 옛 값이다.** `SECTIONS`의 세 번째 값이 `False`인 회기는 본문 대신 「원고를 준비하고 있습니다.」만 실린다. 회기 원고가 확정되면 `True`로 바꾼다.
 - `template.html`: 페이지 골격·CSS·JS. `{{BUTTONS}}`·`{{ARTICLES}}`를 build.py가 채운다.
 - `index.html`: 생성물. 직접 편집하지 않는다.
 - `AGENTS.md`: `CLAUDE.md`에서 자동 생성한 형제 문서. **이 저장소에는 `sync_agent_docs.py`가 없으므로** 머리말 안내와 달리 `agent-docs-sync` 스킬로 재생성하거나, 머리말 4줄과 `SYNC-BODY-START` 표시줄 아래에 `CLAUDE.md` 본문을 그대로 붙여 만든다. **`CLAUDE.md`를 고치면 반드시 함께 갱신한다.** 추적되는 사본이 낡는 것이 추적하지 않는 것보다 나쁘다.
